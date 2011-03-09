@@ -1,4 +1,4 @@
-object Problem5 extends Application {
+object Euler5 extends Application {
     var end = 0
 
     def from(n: Int): Stream[Int] =
