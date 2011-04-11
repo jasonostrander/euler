@@ -1,9 +1,3 @@
-def natural(n:Int, sum:Int):Int = {
-    if (n < 3) return sum
-    if (n % 3 == 0 || n % 5 == 0) {
-        return natural(n-1, sum+n)
-    }
-    return natural(n-1, sum)
-}
+// Euler 1
 
-println(natural(999, 0))
+println( (1 to 1000).filter(x => x%3==0 || x%5==0).sum)
