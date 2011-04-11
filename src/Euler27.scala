@@ -10,12 +10,10 @@ def quad(a:Int, b:Int)(n:Int) = n*n + a*n + b
 
 val limit = 1000
 var max = (0,0,0)
-for (i <- -limit to limit) {
-	for (j <- -limit to limit) {
-		val l = Stream.from(0).map(quad(i, j)(_)).takeWhile(prime).length
-		if (l > max._3) {
-			max = (i, j, l)
-		}
+for (i <- -limit to limit; j <- -limit to limit) {
+	val l = Stream.from(0).map(quad(i, j)(_)).takeWhile(prime).length
+	if (l > max._3) {
+		max = (i, j, l)
 	}
 }
 
